@@ -84,7 +84,7 @@ async def generate_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
             await asyncio.sleep(5)
 
-            image_url = f"https://liveme-image.s3.amazonaws.com/{image_id}-0.jpeg"
+            image_url = f"https://liveme-image.s3.amazonaws.com/{image_id}-{i}.jpeg"
             await waiting_msg.edit_text("✅ Rasm tayyor! 📸")
             await context.bot.send_photo(chat_id=update.effective_chat.id, photo=image_url)
 
